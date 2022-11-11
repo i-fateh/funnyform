@@ -71,7 +71,8 @@ function App() {
         <div id="alien"></div>
 
         <h1 id='title'>FUNNY FORM
-          <span style={{color:'white', fontSize:".4em"}}> by @creazerty</span>
+          <br/>
+          <span className='credits'> by <a href='https://twitter.com/creazerty'>@creazerty</a></span>
         </h1>
 
         <div id='formContainer'>

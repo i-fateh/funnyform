@@ -15,13 +15,17 @@ code {
 
 #title {
   color: white;
-  padding: 30px 60px;
+  padding: 50px 45px;
   background-color: red;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 400;
   text-shadow: black 2px 3px 3px;
   clip-path: polygon(0 0, 95% 23%, 100% 100%, 75% 75%, 100% 100%, 5% 93%, 0% 5%);
 }
+
+a, .credits {  text-decoration: none; color: white; font-size: .9em !important;}
+
+
 
 /* #App {
   background-color: transparent;
@@ -36,12 +40,11 @@ code {
   transition: 3s;
   overflow: hidden !important;
   background-image: url('../public/space.png');
-
 }
 
 input {
   margin: 10px;
-  height: 65px; width: 350px; 
+  height: 55px; width: 380px; 
   border-radius: 15px;
   border: solid 1px silver;
   font-size: 1.7em; text-align: center; font-weight: 300;
@@ -179,4 +182,64 @@ input {
   left: -300px;
   transition: 15s;
   z-index: 9;
+}
+
+a, .credits {  text-decoration: none; color: white; font-size: 1em;}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  #title {
+    font-size: 1.5em; flex-wrap: wrap;
+  }
+
+  a, .credits {  text-decoration: none; color: white; font-size: 1em;}
+
+
+  body {
+    margin: 0;
+    max-width: 100%;
+    background-color: #0652DD;
+    overflow: hidden !important;
+  }
+
+  #AppJauge {
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    height: 100vh; min-width: 100vw;
+    /* background-color: transparent; */
+    transition: 3s;
+    overflow: hidden !important;
+    background-image: url('../public/space.png');
+  }
+
+  #mars, #alien, #saturne {display: none;}
+  #vaisseau {
+    width: 100px; height: 100px;
+  }
+
+  input {
+    width: 70vw;
+    height: 55px;
+  }
+  #envoi {width: 70vw; height: auto; padding: 20px 0px; font-size: 1.5em; margin-top: 10px;}
+
+  #lune{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    bottom: -50vh;
+    border-radius: 50%;
+    z-index: 1;
+    transition: 1.8s;
+    background-image: url('../public/lune.png');
+    background-size: cover;
+    transition: 1.8s;
+  }
+
+  #jaugeTop, #jaugeBottom {
+    max-width: 100vw; height: 10px;
+  }
+  #jaugeRight, #jaugeLeft {
+    max-height: 100vh; width: 10px;
+  }
+
 }
