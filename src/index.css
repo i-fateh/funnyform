@@ -5,9 +5,178 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#title {
+  color: white;
+  padding: 30px 60px;
+  background-color: red;
+  font-size: 4em;
+  font-weight: 400;
+  text-shadow: black 2px 3px 3px;
+  clip-path: polygon(0 0, 95% 23%, 100% 100%, 75% 75%, 100% 100%, 5% 93%, 0% 5%);
+}
+
+/* #App {
+  background-color: transparent;
+  height: 100vh; width: 100vw;
+  overflow: hidden !important;
+} */
+
+#AppJauge {
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  height: 100vh; width: 100vw;
+  /* background-color: transparent; */
+  transition: 3s;
+  overflow: hidden !important;
+  background-image: url('../public/space.png');
+
+}
+
+input {
+  margin: 10px;
+  height: 65px; width: 350px; 
+  border-radius: 15px;
+  border: solid 1px silver;
+  font-size: 1.7em; text-align: center; font-weight: 300;
+  z-index: 2;
+}
+
+
+@keyframes example {
+  from {transform: translateX(65px);}
+  to {transform: translateX(-65px);}
+}
+
+#envoi {
+  background-color: black;
+  border-radius: 15px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 315;
+  height: auto; width: 350px; 
+  color: white; padding-top: 20px; padding-bottom: 20px;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  z-index: 2;
+  transform: translateY(250px);
+}
+
+
+#jaugeTop {
+  width: 0vw; height: 30px;
+  background: #ff3838;
+  position: absolute; top: 0; left: 0;
+  transition: .8s;
+  z-index: 9;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 1200%;
+}
+
+#jaugeRight {
+  width: 30px; height: 0vh;
+  background: #0652DD;
+  position: absolute; right: 0; top: 0;
+  transition: 1s;
+  z-index: 8;
+  border-bottom-left-radius: 1200%;
+  border-bottom-right-radius: 10%;
+}
+
+#jaugeBottom {
+  width: 0vw; height: 30px;
+  background: yellow;
+  position: absolute; bottom: 0; right: 0;
+  transition: 1.2s;
+  z-index: 7;
+  border-top-left-radius: 10%;
+  border-top-left-radius: 1200%;
+}
+
+#jaugeLeft {
+  width: 30px; height: 0vh;
+  background: fuchsia;
+  position: absolute; left: 0; bottom: 0;
+  transition: 1.5s;
+  z-index: 6;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 1200%;
+}
+
+#formContainer {
+  display: flex;
+  align-items: center; justify-content: center;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+#saturne {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  z-index: 0;
+  transition: 7.2s;
+  top: -160px; left: -175px;
+  /* transform: translateX(300px) translateY(-330px); */
+  background-image: url('../public/saturne.png');
+  background-size: cover;
+}
+
+#mars {
+  position: absolute;
+  z-index: 0;
+  top: 360px; right: -245px;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  /* transform: translateY(360px); */
+  transition: 7.2s;
+  background-image: url('../public/mars.png');
+  background-size: cover;
+}
+
+#lune{
+  width: 1200px;
+  height: 1200px;
+  position: absolute;
+  bottom: -1250px;
+  border-radius: 50%;
+  z-index: 1;
+  transition: 1.8s;
+  background-image: url('../public/lune.png');
+  background-size: cover;
+  transition: 1.8s;
+}
+
+#vaisseau {
+  position: absolute;
+  bottom: -310px;
+  width: 200px;
+  height: 200px;
+  background-image: url('../public/vaisseau.png');
+  background-size: cover;
+  transform: rotate(-36deg);
+  transition: 6.2s;
+  z-index: 2;
+}
+
+#alien {
+  position: absolute;
+  bottom: 0px;
+  width: 200px;
+  height: 200px;
+  background-image: url('../public/alien.png');
+  background-size: cover;
+  left: -300px;
+  transition: 15s;
+  z-index: 9;
 }
